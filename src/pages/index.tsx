@@ -40,9 +40,13 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   }
 
   try {
-    const decoded = jwt.verify(mixcloud__session, process.env.NEXT_PUBLIC_JWT_SECRET as string) as User;
+    const decoded = jwt.verify(
+      mixcloud__session,
+      process.env.NEXT_PUBLIC_JWT_SECRET as string
+    ) as { userId: string; username: string; name: string };
 
-    if (!decoded && !decoded.userId) {
+    if (!decoded || !decoded.userId) {
+      console.error('Invalid token data:', decoded);
       return {
         redirect: {
           destination: '/auth/sign-in',
@@ -51,7 +55,19 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
       };
     }
 
-    const user = await clerkClient.users.getUser(decoded?.userId);
+    // Try to get user from Clerk, but use token data as fallback
+    let user;
+    try {
+      user = await clerkClient.users.getUser(decoded.userId);
+    } catch (error) {
+      console.error('Error fetching user from Clerk:', error);
+      // Use token data as fallback
+      user = {
+        id: decoded.userId,
+        firstName: decoded.name,
+        username: decoded.username
+      };
+    }
 
     if (!user) {
       return {
@@ -65,8 +81,8 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     return {
       props: {
         user: {
-          name: user.firstName,
-          username: user.username,
+          name: user.firstName || decoded.name,
+          username: user.username || decoded.username,
         },
       },
     };
