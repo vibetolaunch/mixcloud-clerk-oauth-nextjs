@@ -1,0 +1,36 @@
+# Node modules
+node_modules/
+
+# Build output
+dist/
+out/
+.next/
+build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# OS generated files
+*.swp
+*.swo
+
+# Optional: Ignore coverage reports
+coverage/
+
+# Optional: Ignore TypeScript cache
+*.tsbuildinfo
