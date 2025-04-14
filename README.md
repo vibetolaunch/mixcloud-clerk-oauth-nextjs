@@ -27,3 +27,17 @@ Clone the repo and install dependencies:
 git clone https://github.com/vibetolaunch/mixcloud-clerk-oauth-nextjs.git
 cd your-repo
 npm install
+
+setup in clerk and mixcloud: 
+
+![screencapture-dashboard-clerk-apps-app-2vTU9Ead5csdyukbf7Qbp3pkgCR-instances-ins-2vTU9BarvjsDwUVpGhvNnGNYkRX-user-authentication-email-phone-username-2025-04-13-23_13_59](https://github.com/user-attachments/assets/92845af6-e453-4685-a722-875174b2007a)
+
+![screencapture-dashboard-clerk-apps-app-2vTU9Ead5csdyukbf7Qbp3pkgCR-instances-ins-2vTU9BarvjsDwUVpGhvNnGNYkRX-user-authentication-sso-connections-2025-04-13-23_14_36](https://github.com/user-attachments/assets/6da8158f-8fe5-4921-942d-2d7c873f7bee)
+
+![screencapture-dashboard-clerk-apps-app-2vTU9Ead5csdyukbf7Qbp3pkgCR-instances-ins-2vTU9BarvjsDwUVpGhvNnGNYkRX-user-authentication-sso-connections-oauth-copc-2vTUT5dWWn9Iz6OZ0dfW4IfYv3U-2025-04-13-23_15_24](https://github.com/user-attachments/assets/1d671d80-5c13-4e7e-ae3f-27b18ff09943)
+
+![screencapture-mixcloud-developers-2025-04-13-23_16_56](https://github.com/user-attachments/assets/0b0ac7b3-8067-4322-8c0f-7d836aa3646e)
+
+![screencapture-mixcloud-developers-Q29uc3VtZXI6NTk5OA-2025-04-13-23_21_55](https://github.com/user-attachments/assets/00eee05a-5c5a-4f65-96dd-c9d5909bcb4a)
+
+
