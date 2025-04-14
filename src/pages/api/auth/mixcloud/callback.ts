@@ -44,7 +44,7 @@ export default async function handler(
     } else {
       // 👤 Create new user
       // Ensure username is unique by appending a random string
-      const uniqueUsername = `${username}_${Math.random().toString(36).substring(2, 7)}`;
+      const uniqueUsername = `${username}`; //_${Math.random().toString(36).substring(2, 7)}
       
       try {
         // Generate a secure random password

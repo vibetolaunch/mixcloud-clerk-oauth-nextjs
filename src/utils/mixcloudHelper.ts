@@ -18,17 +18,24 @@ export const getAccessToken = async (code: string) => {
   );
   
   if (!res.ok) throw new Error('Failed to fetch access token');
-  else {
-    console.log("getAccessToken call to mixcloud auth successful")
-    console.dir(res.json())
-  }
-  return res.json();
+  
+  // Only read the response body once and store it
+  const data = await res.json();
+  console.log("getAccessToken call to mixcloud auth successful");
+  console.dir(data);
+  
+  return data;
 };
 
 export const getUserData = async (accessToken: string) => {
   const res = await fetch(`${BASE_URL}/me/?access_token=${accessToken}`);
   if (!res.ok) throw new Error('Failed to fetch user data');
-  return res.json();
+  
+  // Only read the response body once and store it
+  const data = await res.json();
+  console.log("getUserData call to mixcloud successful");
+  
+  return data;
 };
 
 // Interface for Mixcloud track data
@@ -84,8 +91,13 @@ export const getUserFavorites = async (
   const res = await fetch(
     `${BASE_URL}/${username}/favorites/?access_token=${accessToken}&limit=${limit}`
   );
-  console.log(`${BASE_URL}/${username}/favorites/?access_token=${accessToken}&limit=${limit}`)
-  console.dir(res.json())
+  console.log(`${BASE_URL}/${username}/favorites/?access_token=${accessToken}&limit=${limit}`);
+  
   if (!res.ok) throw new Error('Failed to fetch user favorites');
-  return res.json();
+  
+  // Only read the response body once and store it
+  const data = await res.json();
+  console.dir(data);
+  
+  return data;
 };
