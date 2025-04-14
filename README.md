@@ -27,6 +27,7 @@ Clone the repo and install dependencies:
 git clone https://github.com/vibetolaunch/mixcloud-clerk-oauth-nextjs.git
 cd your-repo
 npm install
+```
 
 setup in clerk and mixcloud: 
 
