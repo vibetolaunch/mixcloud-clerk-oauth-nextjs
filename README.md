@@ -24,6 +24,6 @@ Welcome to the Mixcloud & Clerk Integration project — a modern web app built w
 Clone the repo and install dependencies:
 
 ```bash
-git clone https://github.com/Ahsan-khan41/Mixcloud_OAuth.git
+git clone https://github.com/vibetolaunch/mixcloud-clerk-oauth-nextjs.git
 cd your-repo
 npm install
