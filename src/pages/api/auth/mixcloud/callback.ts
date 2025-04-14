@@ -10,8 +10,13 @@ export default async function handler(
   const {
     query: { code },
   } = req;
-  if (!code) return;
-  console.dir(code)
+  if (!code){
+    console.log("mixcloud auth callback failed early - no code obj")
+    return;
+  }
+  else {
+    console.dir(code)
+  }
   try {
     const { access_token } = await getAccessToken(code as string);
 
@@ -83,10 +88,13 @@ export default async function handler(
         expiresIn: '7d', // expires in 7 days
       }
     );
-
+    // Set session cookie
     res.setHeader(
       'Set-Cookie',
-      `mixcloud__session=${token}; Path=/; HttpOnly; Secure; SameSite=Lax`
+      [
+        `mixcloud__session=${token}; Path=/; HttpOnly; Secure; SameSite=Lax`,
+        `mixcloud__access_token=${access_token}; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=${60 * 60 * 24 * 7}` // 7 days
+      ]
     );
 
     res.redirect(`/`);
