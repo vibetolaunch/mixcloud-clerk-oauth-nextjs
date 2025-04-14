@@ -1,6 +1,6 @@
 # 🎧 Mixcloud + Clerk Integration (Next.js)
 
-<img width="1022" alt="Screenshot 2025-04-13 at 10 31 58 PM" src="https://github.com/user-attachments/assets/4e8b54c8-4a7a-4965-afb1-14ee2a53d614" />
+<img width="1022" alt="Screenshot 2025-04-13 at 10 31 58 PM" src="https://github.com/user-attachments/assets/4e8b54c8-4a7a-4965-afb1-14ee2a53d614" />
 
 Welcome to the Mixcloud & Clerk Integration project — a modern web app built with [Next.js](https://nextjs.org), designed to authenticate users using [Clerk](https://clerk.dev) and interact with [Mixcloud](https://www.mixcloud.com/)'s platform.
 
@@ -29,7 +29,7 @@ cd your-repo
 npm install
 ```
 
-setup in clerk and mixcloud: 
+## Setup in Clerk and Mixcloud
 
 ![screencapture-dashboard-clerk-apps-app-2vTU9Ead5csdyukbf7Qbp3pkgCR-instances-ins-2vTU9BarvjsDwUVpGhvNnGNYkRX-user-authentication-email-phone-username-2025-04-13-23_13_59](https://github.com/user-attachments/assets/92845af6-e453-4685-a722-875174b2007a)
 
@@ -41,4 +41,8 @@ setup in clerk and mixcloud:
 
 ![screencapture-mixcloud-developers-Q29uc3VtZXI6NTk5OA-2025-04-13-23_21_55](https://github.com/user-attachments/assets/00eee05a-5c5a-4f65-96dd-c9d5909bcb4a)
 
+---
 
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
